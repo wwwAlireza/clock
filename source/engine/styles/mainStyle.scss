@@ -1,0 +1,133 @@
+#page_size {
+    width: 180px;
+    height: 70px;
+    background-color: #c5c5c5;
+    position: fixed;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: move;
+    bottom: 0;
+}
+
+@font-face {
+    font-family: "digital";
+    src: url("../../fonts/DS-DIGI.TTF");
+}
+
+$item-width: 4px;
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%clock {
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+%border-radius {
+    border-radius: 40%;
+}
+
+body {
+    position: fixed;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #070a0e;
+    @extend %center;
+}
+
+.clock_wrapper {
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    border: 1px solid #070a0e;
+    border-radius: 50%;
+    box-shadow: 13px 13px 26px #040608, -13px -13px 26px #0a0e14;
+    @extend %center;
+    position: relative;
+}
+
+#second {
+    width: 340px;
+    height: 340px;
+    @extend %clock;
+    z-index: 3;
+}
+
+#minute {
+    width: 300px;
+    height: 300px;
+    @extend %clock;
+    z-index: 2;
+}
+
+#hour {
+    width: 230px;
+    height: 230px;
+    @extend %clock;
+    z-index: 1;
+}
+
+.second_item {
+    width: $item-width;
+    height: 180px;
+    background-color: red;
+    opacity: 0.7;
+    @extend %border-radius;
+}
+
+.minute_item {
+    width: $item-width;
+    height: 160px;
+    background-color: #393939;
+    @extend %border-radius;
+}
+
+.hour_item {
+    width: $item-width;
+    height: 125px;
+    background-color: #393939;
+    @extend %border-radius;
+}
+
+#digital_wrapper {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(29, 26, 26, 0.8);
+    @extend %clock;
+    z-index: 4;
+    display: none;
+}
+
+#digital_clock {
+    color: red;
+    font-family: "digital";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-weight: 300;
+    white-space: nowrap;
+    opacity: 0.8;
+    text-align: center;
+}
+
+#ampm {
+    font-size: 23px;
+    font-weight: bold;
+}

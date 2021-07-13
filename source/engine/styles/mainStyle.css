@@ -1,0 +1,147 @@
+#page_size {
+  width: 180px;
+  height: 70px;
+  background-color: #c5c5c5;
+  position: fixed;
+  margin: 10px;
+  border-radius: 15px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  cursor: move;
+  bottom: 0;
+}
+
+@font-face {
+  font-family: "digital";
+  src: url("../../fonts/DS-DIGI.TTF");
+}
+
+.main, .clock_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#second, #minute, #hour, #digital_wrapper {
+  border-radius: 50%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.second_item, .minute_item, .hour_item {
+  border-radius: 40%;
+}
+
+body {
+  position: fixed;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #070a0e;
+}
+
+.clock_wrapper {
+  width: 400px;
+  height: 400px;
+  background-color: transparent;
+  border: 1px solid #070a0e;
+  border-radius: 50%;
+  -webkit-box-shadow: 13px 13px 26px #040608, -13px -13px 26px #0a0e14;
+          box-shadow: 13px 13px 26px #040608, -13px -13px 26px #0a0e14;
+  position: relative;
+}
+
+#second {
+  width: 340px;
+  height: 340px;
+  z-index: 3;
+}
+
+#minute {
+  width: 300px;
+  height: 300px;
+  z-index: 2;
+}
+
+#hour {
+  width: 230px;
+  height: 230px;
+  z-index: 1;
+}
+
+.second_item {
+  width: 4px;
+  height: 180px;
+  background-color: red;
+  opacity: 0.7;
+}
+
+.minute_item {
+  width: 4px;
+  height: 160px;
+  background-color: #393939;
+}
+
+.hour_item {
+  width: 4px;
+  height: 125px;
+  background-color: #393939;
+}
+
+#digital_wrapper {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(29, 26, 26, 0.8);
+  z-index: 4;
+  display: none;
+}
+
+#digital_clock {
+  color: red;
+  font-family: "digital";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 60px;
+  font-weight: 300;
+  white-space: nowrap;
+  opacity: 0.8;
+  text-align: center;
+}
+
+#ampm {
+  font-size: 23px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=mainStyle.css.map */
